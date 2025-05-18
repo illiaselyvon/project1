@@ -1,0 +1,384 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Montserrat', sans-serif;
+    color: #2d3748;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 70px;
+}
+.content-section {
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+.section-title {
+    font-size: 3rem; font-weight: 800; color: #1a202c;
+    margin-bottom: 50px; text-transform: uppercase;
+    letter-spacing: 2px; position: relative; display: inline-block;
+}
+.section-title::after {
+    content: ''; position: absolute; width: 50%; height: 4px;
+    background: #ed64a6; bottom: -10px; left: 25%; border-radius: 2px;
+}
+.card-header {
+    background-color: #ed64a6;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-footer {
+    background-color: #f7fafc;
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+.form-group label { font-weight: 700; color: #4a5568; margin-bottom: 8px; }
+.form-control {
+    border-radius: 10px; border: 2px solid #e2e8f0;
+    padding: 12px 40px; 
+    transition: all 0.3s ease;
+    background: #f7fafc url('../images/input-icon.svg') no-repeat 10px center; 
+    background-size: 20px;
+}
+.form-control:focus {
+    border-color: #ed64a6; box-shadow: 0 0 0 4px rgba(237, 100, 166, 0.1);
+    outline: none;
+    background-color: #fff;
+}
+.form-control:focus {
+    border-color: #ed64a6; box-shadow: 0 0 0 4px rgba(237, 100, 166, 0.1);
+    outline: none;
+}
+
+.btn {
+    background-color: #3182ce; 
+    color: white; 
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2b6cb0; 
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.3); 
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2b6cb0;
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.3);
+    transform: translateY(-2px);
+}
+.button:hover {
+    background: #d53f8c; transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(237, 100, 166, 0.3);
+}
+.action-link { font-size: 1rem; font-weight: 600; transition: all 0.3s ease; }
+.action-link.edit { color: #3182ce; }
+.action-link.delete { color: #e53e3e; }
+.action-link:hover { transform: translateY(-1px); display: inline-block; }
+.action-link i { margin-right: 5px; }
+table {
+    background: white; border-radius: 15px;
+    overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+th {
+    background: #ed64a6; color: white;
+    font-weight: 700; padding: 15px;
+    text-transform: uppercase;
+}
+td { vertical-align: middle; padding: 15px; border-bottom: 1px solid #edf2f7; }
+tr { transition: background 0.3s ease; }
+tr:hover { background: #fefcbf; }
+#map {
+    height: 450px; border-radius: 15px;
+    border: 3px solid #e2e8f0; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+a {
+    color: #3182ce;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+.promo-img {
+    width: 100%; height: 200px;
+    object-fit: cover; border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+}
+.auth-card {
+    max-width: 500px; /* Увеличьте ширину до 500px */
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.auth-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.auth-card .form-group {
+    margin-bottom: 20px;
+}
+.auth-card .form-control {
+    padding: 12px 15px;
+    font-size: 1rem;
+}
+.auth-card .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.auth-card p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+.auth-card p a {
+    color: #3182ce;
+    font-weight: 700;
+}
+.auth-card p a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#welcome-message {
+    animation: blink 1s infinite; /* Мигает каждые 1 секунду */
+}
+.navbar {
+    background-color: #2d3748;
+    padding: 10px 20px;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #3182ce;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.dropdown-menu {
+    background-color: #2d3748;
+    border: none;
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #3182ce;
+    color: white;
+}
+.accordion-button {
+    background-color: #edf2f7;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ed64a6;
+    color: white;
+}
+
+.accordion-body {
+    background-color: #f7fafc;
+    color: #4a5568;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.content-section {
+    background: #f7f7f7;
+    padding: 20px 0;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+#footer {
+    background: #2d3748;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+.content-section {
+    background: #f7f7f7;
+    padding: 20px 0;
+}
+
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    max-width: 500px; /* Увеличьте ширину */
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#featured-products {
+    background: #f7f7f7;
+    padding: 50px 0;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.btn-primary {
+    background-color: #3182ce;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2b6cb0;
+}
+#promo-slider img {
+    height: 400px;
+    object-fit: cover;
+}
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #f7f7f7;
+}
+#why-choose-us {
+    background: #edf2f7;
+    padding: 50px 0;
+}
+
+#why-choose-us i {
+    color: #3182ce;
+    margin-bottom: 10px;
+}
+
+#why-choose-us h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+#why-choose-us p {
+    font-size: 1rem;
+    color: #4a5568;
+}
